@@ -54,7 +54,6 @@ class ChatInputBarState extends State<ChatInputBar> {
               padding: EdgeInsets.all(8),
               child: TextFormField(
                 autocorrect: true,
-                autofocus: true,
                 controller: controller,
                 maxLines: 3,
                 minLines: 1,
@@ -90,7 +89,7 @@ class ChatInputBarState extends State<ChatInputBar> {
   void submit () {
     widget.onSubmit([new Message(text: controller.text, user: user)]);
     // controller.text = '';
-    // controller.clear();
+    controller.clear();
     // controller.text = null;
   }
 }

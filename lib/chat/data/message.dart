@@ -1,11 +1,11 @@
 import 'user.dart';
 
 class Message {
-  final dynamic id;
-  final String text;
-  final DateTime date;
-  final User user;
-  final bool log;
+  dynamic id;
+  String text;
+  DateTime date;
+  User user;
+  bool log;
 
   Message({
     this.id,

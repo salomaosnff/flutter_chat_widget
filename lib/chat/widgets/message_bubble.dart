@@ -26,10 +26,19 @@ class ChatMessageBubble extends StatelessWidget {
           constraints: BoxConstraints(maxWidth: 240),
           margin: EdgeInsets.all(2),
           decoration: BoxDecoration(
-              color: right ? Colors.blue : Colors.white,
-              borderRadius: right
-                  ? BorderRadius.horizontal(left: Radius.circular(8))
-                  : BorderRadius.horizontal(right: Radius.circular(8))),
+            color: right ? Colors.blue : Colors.white,
+            borderRadius: right
+              ? BorderRadius.only(
+                topLeft: Radius.circular(8),
+                topRight: Radius.circular(8),
+                bottomLeft: Radius.circular(8),
+              )
+              : BorderRadius.only(
+                topLeft: Radius.circular(8),
+                topRight: Radius.circular(8),
+                bottomRight: Radius.circular(8),
+              )
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
